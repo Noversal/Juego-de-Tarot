@@ -1,0 +1,64 @@
+@import "global.css";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100;0,700;0,900;1,400&display=swap");
+
+body {
+  font-family: "Bangers", cursive;
+  color: #ffd000;
+}
+
+.titulo-descripcion {
+  text-align: center;
+}
+
+.titulo-descripcion h1 {
+  font-size: 45px;
+}
+
+.titulo-descripcion p {
+  background: #8c867b60;
+}
+
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  background: url("../../assets/img/fondotarot-min.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 40px 0;
+}
+
+.juego {
+  display: flex;
+  position: absolute;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.player input {
+  border: none;
+  background: #0000003b;
+}
+
+.player h2 {
+  text-align: center;
+}
+
+.play {
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 23px;
+  border: none;
+}

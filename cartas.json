@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "name": "Justicia",
+      "desc": "La figura de la Justicia se sienta frente a un velo púrpura colgado libremente, que significa compasión, y entre dos pilares, similares a los que enmarcan a la Alta Sacerdotisa y al Hierofante, que simbolizan el equilibrio, la ley y la estructura.",
+      "img": "assets/img/justicia.jpg",
+      "score": 1
+    },
+    {
+      "name": "El Mundo",
+      "desc": "La tarjeta del Mundo muestra a una mujer desnuda envuelta en un paño púrpura, bailando dentro de una gran corona de laurel.",
+      "img": "assets/img/El-Mundo.jpg",
+      "score": 2
+    },
+    {
+      "name": "La Luna",
+      "desc": "La tarjeta de la Luna muestra una luna llena en el cielo de la noche, colocada entre dos grandes torres.",
+      "img": "assets/img/La-Luna.jpg",
+      "score": 3
+    },
+    {
+      "name": "El Sol",
+      "desc": "La carta del Tarot del Sol irradia optimismo y positividad. ",
+      "img": "assets/img/El-Sol.jpg",
+      "score": 4
+    },
+    {
+      "name": "Juicio",
+      "desc": "La tarjeta judgement muestra a hombres, mujeres y niños desnudos levantándose de sus tumbas, con los brazos abiertos y mirando hacia el cielo.",
+      "img": "assets/img/Juicio.jpg",
+      "score": 5
+    },
+    {
+      "name": "La Estrella",
+      "desc": "La tarjeta Star muestra a una mujer desnuda arrodillado en el borde de una pequeña piscina.",
+      "img": "assets/img/La-Estrella.jpg",
+      "score": 6
+    },
+    {
+      "name": "La Torre",
+      "desc": "La Torre muestra una torre alta encaramado en la cima de una montaña rocosa.",
+      "img": "assets/img/La-Torre.jpg",
+      "score": 7
+    },
+    {
+      "name": "El Diablo",
+      "desc": "La tarjeta del Diablo muestra a Baphomet, o la Cabra de Mendes, una criatura que es mitad hombre, mitad cabra.",
+      "img": "assets/img/El-Diablo.jpg",
+      "score": 8
+    },
+    {
+      "name": "Templanza",
+      "desc": "La carta de templanza muestra un ángel grande y alado que es a la vez masculino y femenino. ",
+      "img": "assets/img/Templansa.jpg",
+      "score": 9
+    },
+    {
+      "name": "Muerte",
+      "desc": "La tarjeta de la Muerte muestra al Mensajero de la Muerte , un esqueleto vestido con una armadura negra, montando un caballo blanco. ",
+      "img": "assets/img/Muerte.jpg",
+      "score": 10
+    },
+    {
+      "name": "El Hombre Ahorcado",
+      "desc": "El Hombre Ahorcado muestra a un hombre suspendido de una cruz en forma de T hecha de madera viva.",
+      "img": "assets/img/El-Hombre-Ahorcado.jpg",
+      "score": 11
+    },
+    {
+      "name": "La Rueda de la Fortuna",
+      "desc": "La tarjeta de la Rueda de la Fortuna muestra una rueda gigante, con tres figuras en los bordes exteriores.",
+      "img": "assets/img/La-Rueda-de-la-Fortuna.jpg",
+      "score": 12
+    },
+    {
+      "name": "El Ermitaño",
+      "desc": "El Ermitaño se encuentra solo en la cima de una montaña. ",
+      "img": "assets/img/El-Ermitaño.jpg",
+      "score": 13
+    },
+    {
+      "name": "La Fuerza",
+      "desc": " Domando a un león, que se entrega. Con amor y paciencia todo se puede conseguir.",
+      "img": "assets/img/La-Fuerza.jpg",
+      "score": 14
+    },
+    {
+      "name": "El Carro",
+      "desc": "La carta del Tarot del Carro muestra a un valiente guerrero de pie dentro de un carro.",
+      "img": "assets/img/El-Carro.jpg",
+      "score": 15
+    },
+    {
+      "name": "Los Amantes",
+      "desc": "La tarjeta de los amantes muestra a un hombre y una mujer desnudos de pie debajo del ángel, Rafael, cuyo nombre significa ‘Dios sana’ y representa la curación física y emocional.",
+      "img": "assets/img/Los-Amantes.jpg",
+      "score": 16
+    },
+    {
+      "name": "El Emperador",
+      "desc": "Si la Emperatriz es el arquetipo Madre de la baraja del Tarot, el Emperador es el Padre.",
+      "img": "assets/img/El-Emperador.jpg",
+      "score": 17
+    },
+    {
+      "name": "El Hierofante",
+      "desc": "La carta del Hierofante, El Papa o El Sumo Sacerdote representa un conjunto establecido de valores y creencias espirituales y a menudo se correlaciona con la religión y otras doctrinas formales.",
+      "img": "assets/img/El-Hierofante.jpg",
+      "score": 18
+    },
+    {
+      "name": "La Emperatriz",
+      "desc": "La emperatriz es una mujer hermosa, de figura completa, con el pelo rubio y un aura pacífica sobre ella.",
+      "img": "assets/img/La-Emperatriz.jpg",
+      "score": 19
+    },
+    {
+      "name": "La Alta Sacerdotisa",
+      "desc": "La Alta Sacerdotisa se sienta frente a un delgado velo decorado con granadas.",
+      "img": "assets/img/La-Alta-Sacerdotisa.jpg",
+      "score": 20
+    },
+    {
+      "name": "El Mago",
+      "desc": "La carta del Mago es numerada Uno – el número de nuevos comienzos y oportunidades – y se asocia con el planeta de Mercurio.",
+      "img": "assets/img/El-Mago.jpg",
+      "score": 21
+    },
+    {
+      "name": "El Loco",
+      "desc": "El Loco está numerado 0 – el número de potencial ilimitado – y por lo tanto no tiene un lugar específico en la secuencia de las cartas del Tarot.",
+      "img": "assets/img/El-Loco.jpg",
+      "score": 22
+    }
+  ]
+}
