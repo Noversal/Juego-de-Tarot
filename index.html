@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="src/css/main.css" />
   </head>
   <body>
-     <container id="menu" class="container">
+     <container id="menu">
       <div class="menu__container">
         <div class="titulo-descripcion">
           <header>
@@ -29,18 +29,15 @@
               <input id="player2" type="text" />
             </label>
           </div>
-          <button id="play" class="play"><span>Suerte</span></button>
+          <button type="button" id="play" class="play"><span>Suerte</span></button>
         </div>
         <div id="partidasGuardadas" class="partidasGuardadas"></div>
       </div>
      </container>
-      <container id="load" class="container">
-        <div class="load">
-          <img src="assets/img/loader.gif" alt="">
-          <h4>Obteniendo Cartas</h4>
-        </div>
+      <container id="load" >
       </container>
-      <container id="cards" class="container">
+      <container id="cards" >
+      <div class="carousel">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -59,13 +56,14 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <div class="buttons-carousel">
-            <button id="save">Guardar</button>
-            <button id="volverAtirar">Volver a Tirar</button>
-          </div>
         </div>
+        <div class="buttons-carousel">
+          <button type="button" id="save">Guardar</button>
+          <button type="button" id="volverAtirar">Volver a Tirar</button>
+        </div>
+      </div>
       </container>
-      <container id="match" class="container">
+      <container id="match" >
         <div id="match_result" class="match_result"></div>
       </container>
     </section>

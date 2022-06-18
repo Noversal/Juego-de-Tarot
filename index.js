@@ -1,23 +1,30 @@
 import { getData } from './modules/services.js'
 import { CarouselCartas } from './modules/CarrouselCartas.js'
-
+import { mostrarMatch } from './modules/mostrarMatch.js'
+import { PartidasGuardadas } from './modules/PartidasGuardadas.js'
 
 // Botones
 const botonJugar = document.getElementById('play')
-let volverAtirar = document.querySelector('#volverAtirar')
-let save = document.querySelector('#save')
+const volverAtirar = document.querySelector('#volverAtirar')
+const save = document.querySelector('#save')
 //Pantallas
-const containers = document.querySelectorAll('.container')
+const containers = document.querySelectorAll('container')
 const menu = document.querySelector('#menu')
 const load = document.querySelector('#load')
 const cards = document.querySelector('#cards')
+const match = document.querySelector('#match')
 //Resultados
 let jugadaCartas = document.querySelector('#jugada')
+const match_result = document.querySelector('#match_result')
+const partidasGuardadas = document.querySelector('#partidasGuardadas')
+let partidaJugada
 
 function PasarPantalla (pantalla) {
   containers.forEach(container => {
     container.style.display = 'none'
+    console.log(container)
   })
+
   pantalla.style.display = 'block'
 
   if (pantalla === load) {
@@ -52,7 +59,7 @@ function chuck (cards) {
 
 const chunckCards = async ()=> await getData().then(cards => chuck(cards))
 
-const mostrarCartas = ({cards,players}) => {
+const mostrarCartas = ({cards,players},carga) => {
   while (jugadaCartas.childNodes.length < 7) {
     if (jugadaCartas.childNodes.length > 0) {
       removeAllChilds(jugadaCartas)
@@ -63,25 +70,41 @@ const mostrarCartas = ({cards,players}) => {
         i++
       })
       console.log(jugadaCartas.childNodes.length)
+      
+      // Pantalla de Carga
+      load.innerHTML = `        
+      <div class="load" >
+      <img src="assets/img/loader.gif" alt="">
+      <h4>${carga}</h4>    
+      </div>`
+
       PasarPantalla(load)
+   
       break
     }
   }
 }
 
+const resultadoMatch = (cards) => {
+  let score = 0
+  cards.forEach(card => {
+    score += card.score
+  })
+  return score % 2 === 0 
+}
+
+let partidasJugadas = []
 
 function initGame () {
-  PasarPantalla(menu)
   let cards = []
-  let partidasJugadas = [{id:1},{id:3}]
   let partida = {
     players: [],
     cards: []
   }
   
   botonJugar.addEventListener('click', async () => {
-    const player1 = document.getElementById('player1').value 
-    const player2 = document.getElementById('player2').value
+    let player1 = document.getElementById('player1').value 
+    let player2 = document.getElementById('player2').value
     
     const validateChuck = player1 !== '' && player2 !== ''
     
@@ -89,7 +112,9 @@ function initGame () {
       cards = await chunckCards()
       partida.cards = cards
       partida.players= {player1,player2}
-      mostrarCartas(partida)
+      player1 = document.getElementById('player1').value = ''
+      player2 = document.getElementById('player2').value = ''
+      mostrarCartas(partida,'Obteniendo Cartas...')
       PasarPantalla(load)
       console.log(partida.cards)
     }
@@ -105,11 +130,50 @@ function initGame () {
   })
 
   save.addEventListener('click', () => {
-    const {score} = partida.cards
-    console.log(score)
-    partida.id = partidasJugadas.length + 1
+    const res = resultadoMatch(partida.cards)
+    match_result.innerHTML += mostrarMatch(res,partida.cards)
+    let ids = partidasJugadas.map(partida =>  partida.id ?? 0 )
+    partida = {
+      ...partida,
+      result: res,
+      id: ids.length > 0 ? Math.max(...ids) + 1 : 1
+    }
+    if(ids.length === 0) {
+      partidasGuardadas.innerHTML = `            
+      <h4>Partidas Guardadas</h4>
+      <div class="partidasJugadas" id="partidaJugada"></div>
+      `
+    }
+
+    partidasJugadas.push(partida)
+    console.log(partidasJugadas)
+    PasarPantalla(match)
+  })
+  
+  match.addEventListener('click', (e) => {
+    partidaJugada = document.querySelector('#partidaJugada')
+    console.log({partida})
+    partidaJugada.innerHTML += PartidasGuardadas(partida) 
+    partida = {
+      players: [],
+      cards: []
+    }
+    if(e.target.id === 'salirMatch'){
+      removeAllChilds(match_result)
+      PasarPantalla(menu)
+    }
   })
 }
 
-
+PasarPantalla(menu)
 initGame()
+
+partidasGuardadas.addEventListener('click', (e) => {
+  
+  partidasJugadas.forEach(partida => {
+    console.log(partida.id)
+    if(partida.id === Number(e.target.value)) {   
+      mostrarCartas(partida,'Cargando Partida...')
+    }
+  })
+})
