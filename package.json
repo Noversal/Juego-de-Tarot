@@ -1,15 +1,14 @@
 {
   "name": "tarot",
   "version": "1.0.0",
-  "description": "juego de tarot",
+  "description": "Juego de tarot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Noversal",
   "license": "ISC",
-  "dependencies": {
-    "uuid": "^8.3.2"
-  },
-  "type": "module"
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  }
 }
