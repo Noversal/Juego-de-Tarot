@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "name": "Justicia",
+      "desc": "Sentado frente a un velo púrpura colgado libremente.",
+      "img": "./src/assets/img/justicia.jpg",
+      "score": 1
+    },
+    {
+      "name": "El Mundo",
+      "desc": "Bailando dentro de una gran corona de laurel.",
+      "img": "./src/assets/img/El-Mundo.jpg",
+      "score": 2
+    },
+    {
+      "name": "La Luna",
+      "desc": "Llena en el cielo de la noche, colocada entre dos grandes torres.",
+      "img": "./src/assets/img/La-Luna.jpg",
+      "score": 3
+    },
+    {
+      "name": "El Sol",
+      "desc": "Irradia optimismo y positividad.",
+      "img": "./src/assets/img/El-Sol.jpg",
+      "score": 4
+    },
+    {
+      "name": "Juicio",
+      "desc": "Hombres, mujeres y niños levantándose de sus tumbas.",
+      "img": "./src/assets/img/Juicio.jpg",
+      "score": 5
+    },
+    {
+      "name": "La Estrella",
+      "desc": "Arrodilladose en el borde de una pequeña piscina.",
+      "img": "./src/assets/img/La-Estrella.jpg",
+      "score": 6
+    },
+    {
+      "name": "La Torre",
+      "desc": "Torre alta encaramado en la cima de una montaña rocosa.",
+      "img": "./src/assets/img/La-Torre.jpg",
+      "score": 7
+    },
+    {
+      "name": "El Diablo",
+      "desc": "Una criatura que es mitad hombre, mitad cabra.",
+      "img": "./src/assets/img/El-Diablo.jpg",
+      "score": 8
+    },
+    {
+      "name": "Templanza",
+      "desc": "Ángel grande y alado que es a la vez masculino y femenino.",
+      "img": "./src/assets/img/Templansa.jpg",
+      "score": 9
+    },
+    {
+      "name": "Muerte",
+      "desc": "Esqueleto vestido con una armadura negra, montando un caballo blanco.",
+      "img": "./src/assets/img/Muerte.jpg",
+      "score": 10
+    },
+    {
+      "name": "El Hombre Ahorcado",
+      "desc": "Hombre suspendido de una cruz en forma de T hecha de madera viva.",
+      "img": "./src/assets/img/El-Hombre-Ahorcado.jpg",
+      "score": 11
+    },
+    {
+      "name": "La Rueda de la Fortuna",
+      "desc": "Rueda gigante, con tres figuras en los bordes exteriores.",
+      "img": "./src/assets/img/La-Rueda-de-la-Fortuna.jpg",
+      "score": 12
+    },
+    {
+      "name": "El Ermitaño",
+      "desc": "El Ermitaño se encuentra solo en la cima de una montaña. ",
+      "img": "./src/assets/img/El-Ermitaño.jpg",
+      "score": 13
+    },
+    {
+      "name": "La Fuerza",
+      "desc": "Domando a un león, que se entrega.",
+      "img": "./src/assets/img/La-Fuerza.jpg",
+      "score": 14
+    },
+    {
+      "name": "El Carro",
+      "desc": "Valiente guerrero de pie dentro de un carro.",
+      "img": "./src/assets/img/El-Carro.jpg",
+      "score": 15
+    },
+    {
+      "name": "Los Amantes",
+      "desc": "Un hombre y una mujer desnudos de pie debajo del ángel.",
+      "img": "./src/assets/img/Los-Amantes.jpg",
+      "score": 16
+    },
+    {
+      "name": "El Emperador",
+      "desc": "Si la Emperatriz es el arquetipo Madre de la baraja del Tarot, el Emperador es el Padre.",
+      "img": "./src/assets/img/El-Emperador.jpg",
+      "score": 17
+    },
+    {
+      "name": "El Hierofante",
+      "desc": "La carta del Hierofante, El Papa o El Sumo Sacerdote representa un conjunto establecido de valores y creencias espirituales y a menudo se correlaciona con la religión y otras doctrinas formales.",
+      "img": "./src/assets/img/El-Hierofante.jpg",
+      "score": 18
+    },
+    {
+      "name": "La Emperatriz",
+      "desc": "La emperatriz es una mujer hermosa, de figura completa, con el pelo rubio y un aura pacífica sobre ella.",
+      "img": "./src/assets/img/La-Emperatriz.jpg",
+      "score": 19
+    },
+    {
+      "name": "La Alta Sacerdotisa",
+      "desc": "La Alta Sacerdotisa se sienta frente a un delgado velo decorado con granadas.",
+      "img": "./src/assets/img/La-Alta-Sacerdotisa.jpg",
+      "score": 20
+    },
+    {
+      "name": "El Mago",
+      "desc": "La carta del Mago es numerada Uno – el número de nuevos comienzos y oportunidades – y se asocia con el planeta de Mercurio.",
+      "img": "./src/assets/img/El-Mago.jpg",
+      "score": 21
+    },
+    {
+      "name": "El Loco",
+      "desc": "El Loco está numerado 0 – el número de potencial ilimitado – y por lo tanto no tiene un lugar específico en la secuencia de las cartas del Tarot.",
+      "img": "./src/assets/img/El-Loco.jpg",
+      "score": 22
+    }
+  ]
+}
