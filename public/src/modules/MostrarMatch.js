@@ -1,3 +1,10 @@
+/**
+ * Muestra el match en el DOM 
+ * @param {Number} res 
+ * @param {Array} cards 
+ * @returns {HTMLElement} 
+ */
+
 export const mostrarMatch = (res,cards) => {
   let resultadoTexto = 'Resultado del Match'
   return (

@@ -1,14 +1,15 @@
 import { getData } from './modules/services'
 import { CarouselCartas } from './modules/CarrouselCartas'
 import { mostrarMatch } from './modules/mostrarMatch'
-import { PartidasGuardadas } from './modules/PartidasGuardadas'
+import { PartidaGuardada } from './modules/PartidasGuardadas'
 import charge from '../src/assets/img/loader.gif'
 
-console.log(charge)
 // Botones
 const botonJugar = document.getElementById('play')
 const volverAtirar = document.querySelector('#volverAtirar')
 const save = document.querySelector('#save')
+const verMatch = document.querySelector('#verMatch')
+const buttonsCarousel = document.querySelectorAll('.buttons-carousel')
 //Pantallas
 const containers = document.querySelectorAll('container')
 const menu = document.querySelector('#menu')
@@ -21,6 +22,23 @@ const match_result = document.querySelector('#match_result')
 const partidasGuardadas = document.querySelector('#partidasGuardadas')
 let partidaJugada
 
+console.log(buttonsCarousel)
+
+
+/**
+ * @param {Number} buttonNumber - numero del boton del carrousel
+ */
+const buttonAsigned = (buttonNumber) => {
+  buttonsCarousel.forEach(button => {
+    button.style.display = 'none'
+  })
+  buttonsCarousel[buttonNumber].style.display = 'block'
+}
+
+/**
+ * 
+ * @param {HTMLElement} pantalla - pantalla a mostrar
+ */
 const PasarPantalla = (pantalla) => {
   containers.forEach(container => {
     container.style.display = 'none'
@@ -59,7 +77,7 @@ const chuck = (cards) => {
   return (play)
 }
 
-const chunckCards = async ()=> await getData().then(cards => chuck(cards))
+const chunckCards =  () =>  getData().then(cards => chuck(cards))
 
 const mostrarCartas = ({cards,players},carga = 'Obteniendo Cartas...') => {
   while (jugadaCartas.childNodes.length < 7) {
@@ -120,6 +138,7 @@ const initGame = () => {
       mostrarCartas(partida)
       PasarPantalla(load)
       console.log(partida.cards)
+      buttonAsigned(0)
     }
     
   })
@@ -147,16 +166,14 @@ const initGame = () => {
       <div class="partidasJugadas" id="partidaJugada"></div>
       `
     }
-
+    partidaJugada = document.querySelector('#partidaJugada')
+    partidaJugada.innerHTML += PartidaGuardada(partida) 
     partidasJugadas.push(partida)
     console.log(partidasJugadas)
     PasarPantalla(match)
   })
   
   match.addEventListener('click', (e) => {
-    partidaJugada = document.querySelector('#partidaJugada')
-    console.log({partida})
-    partidaJugada.innerHTML += PartidasGuardadas(partida) 
     partida = {
       players: [],
       cards: []
@@ -177,6 +194,11 @@ partidasGuardadas.addEventListener('click', (e) => {
     console.log(partida.id)
     if(partida.id === Number(e.target.value)) {   
       mostrarCartas(partida,'Cargando Partida...')
+      buttonAsigned(1)
+      verMatch.addEventListener('click', () => {
+        match_result.innerHTML += mostrarMatch(partida.res,partida.cards)
+        PasarPantalla(match)
+      })
     }
   })
 })

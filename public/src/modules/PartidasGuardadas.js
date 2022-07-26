@@ -1,4 +1,4 @@
-export const PartidasGuardadas = (partida) => {
+export const PartidaGuardada = (partida) => {
   
   const {players,id} = partida 
 

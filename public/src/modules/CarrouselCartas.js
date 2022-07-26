@@ -1,20 +1,25 @@
-export const CarouselCartas = (...params) => {
-  // console.log({params})
 
-  const {name,desc,img} = params[0]
-  const {player1,player2} = params[2]
-  console.log({desc})
-  // console.log(`jugador1:${player1}`)
-  // console.log(`jugador2:${player2}`)
-  // console.log(name, desc, img)
+/**
+ * Genera un carrousel con las cartas de ambos jugadores
+ * @param {Object} card
+ * @param {String} active
+ * @param {String[]} player
+ * @returns {HTMLElement}
+ */
 
+export const CarouselCartas = (card,active,player) => {
+
+  const {name,desc,img} = card
+  const {player1,player2} = player
+
+console.log({card,active,player})
   // Poner Modo ACTIVO
-  let active
-  params[1] === 0 ? active = 'active' : active = ''
+  let firstActive
+  active === 0 ? firstActive = 'active' : active = ''
   // Crear Cartas
-  if (params[1] < 3) {
+  if (active< 3) {
     return [
-      `<div class="carousel-item ${active}">
+      `<div class="carousel-item ${firstActive}">
                 <h4>Cartas de ${player1}</h4>
                 <img src="${img}" class="d-block w-100" alt="${name}">
                 <div class="carousel-caption d-md-block">
@@ -25,7 +30,7 @@ export const CarouselCartas = (...params) => {
   }
   else {
     return [
-      `<div class="carousel-item ${active}">
+      `<div class="carousel-item ${firstActive}">
             <h4>Cartas de ${player2}</h4>
             <img src="${img}" class="d-block w-100" alt="${name}">
             <div class="carousel-caption d-md-block">
