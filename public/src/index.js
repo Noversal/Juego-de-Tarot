@@ -1,6 +1,6 @@
 import { getData } from './modules/services'
 import { CarouselCartas } from './modules/CarrouselCartas'
-import { mostrarMatch } from './modules/mostrarMatch'
+import { mostrarMatch } from './modules/MostrarMatch'
 import { PartidaGuardada } from './modules/PartidasGuardadas'
 import charge from '../src/assets/img/loader.gif'
 
