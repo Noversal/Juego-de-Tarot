@@ -11,10 +11,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
-        uses: actions/install-node@v3
-        with:
-          package: firebase-tools
       - name: Build and deploy
         run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
