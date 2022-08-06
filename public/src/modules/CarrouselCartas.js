@@ -9,21 +9,19 @@
 
 export const CarouselCartas = (card,active,player) => {
 
-  const {name,desc,img} = card
-  const {player1,player2} = player
-
-  console.log({player1,player2})
+  // console.log({player1,player2})
   // Poner Modo ACTIVO
   let firstActive
+  console.log({active})
   active === 0 ? firstActive = 'active' : active = ''
   // Crear Cartas
-  if (active< 3) {
+  if (active > 3) {
     return (
       `<div class="carousel-item ${firstActive}">
-                <h4>Cartas de ${player1}</h4>
-                <img src="${img}" class="d-block w-100" alt="${name}">
+                <h4>Cartas de ${player[0]}</h4>
+                <img src="${card.img}" class="d-block w-100" alt="${card.name}">
                 <div class="carousel-caption d-md-block">
-                    <p class="desc-carta">${desc}</p>
+                    <p class="desc-carta">${card.desc}</p>
                 </div>
             </div>`
     )
@@ -31,10 +29,10 @@ export const CarouselCartas = (card,active,player) => {
   else {
     return (
       `<div class="carousel-item ${firstActive}">
-            <h4>Cartas de ${player2}</h4>
-            <img src="${img}" class="d-block w-100" alt="${name}">
+            <h4>Cartas de ${player[1]}</h4>
+            <img src="${card.img}" class="d-block w-100" alt="${card.name}">
             <div class="carousel-caption d-md-block">
-                <p class="desc-carta">${desc}</p>
+                <p class="desc-carta">${card.desc}</p>
             </div>
         </div>`
     )

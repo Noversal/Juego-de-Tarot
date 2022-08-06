@@ -1,0 +1,40 @@
+[debug] [2022-08-02T16:27:10.401Z] ----------------------------------------------------------------------
+[debug] [2022-08-02T16:27:10.408Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Noversal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-08-02T16:27:10.409Z] CLI Version:   10.6.0
+[debug] [2022-08-02T16:27:10.409Z] Platform:      win32
+[debug] [2022-08-02T16:27:10.410Z] Node Version:  v16.14.2
+[debug] [2022-08-02T16:27:10.413Z] Time:          Tue Aug 02 2022 13:27:10 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-08-02T16:27:10.414Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-02T16:27:10.665Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-02T16:27:10.667Z] > authorizing via signed-in user (fadionofrio@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2022-08-02T16:27:10.726Z] [hub] writing locator at C:\Users\Noversal\AppData\Local\Temp\hub-tarot-c4969.json
+[debug] [2022-08-02T16:27:10.761Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tarot-c4969/sites 
+[debug] [2022-08-02T16:27:12.108Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tarot-c4969/sites 200
+[debug] [2022-08-02T16:27:12.109Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tarot-c4969/sites {"sites":[{"name":"projects/tarot-c4969/sites/tarot-c4969","defaultUrl":"https://tarot-c4969.web.app","appId":"1:869685423551:web:6eb8ef526dfc37b4b8850a","type":"DEFAULT_SITE"}]}
+[debug] [2022-08-02T16:27:12.110Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tarot-c4969/webApps/1:869685423551:web:6eb8ef526dfc37b4b8850a/config [none]
+[debug] [2022-08-02T16:27:12.666Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tarot-c4969/webApps/1:869685423551:web:6eb8ef526dfc37b4b8850a/config 200
+[debug] [2022-08-02T16:27:12.666Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tarot-c4969/webApps/1:869685423551:web:6eb8ef526dfc37b4b8850a/config {"projectId":"tarot-c4969","appId":"1:869685423551:web:6eb8ef526dfc37b4b8850a","databaseURL":"https://tarot-c4969-default-rtdb.firebaseio.com","storageBucket":"tarot-c4969.appspot.com","locationId":"us-central","apiKey":"AIzaSyAND4EORJPnSsJ5Djdx7RGBPYA1VxMj2JM","authDomain":"tarot-c4969.firebaseapp.com","messagingSenderId":"869685423551","measurementId":"G-RL78Z1R1LJ"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI requires a project ID to start. Configure your default project with 'firebase use' or pass the --project flag."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [02/Aug/2022:16:27:16 +0000] "GET / HTTP/1.1" 200 3765 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Aug/2022:16:27:16 +0000] \"GET / HTTP/1.1\" 200 3765 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Aug/2022:16:27:27 +0000] "GET /src/assets/img/El-Loco.jpg HTTP/1.1" 200 30465 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Aug/2022:16:27:27 +0000] \"GET /src/assets/img/El-Loco.jpg HTTP/1.1\" 200 30465 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Aug/2022:16:27:27 +0000] "GET /src/assets/img/El-Sol.jpg HTTP/1.1" 200 23320 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Aug/2022:16:27:27 +0000] \"GET /src/assets/img/El-Sol.jpg HTTP/1.1\" 200 23320 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Aug/2022:16:27:27 +0000] "GET /public/src/assets/img/loader.gif HTTP/1.1" 404 1808 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Aug/2022:16:27:27 +0000] \"GET /public/src/assets/img/loader.gif HTTP/1.1\" 404 1808 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36\""}}

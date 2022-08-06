@@ -132,12 +132,12 @@ const initGame = () => {
     if (validateChuck) { 
       cards = await chunckCards()
       partida.cards = cards
-      partida.players= {player1,player2}
+      partida.players= [player1,player2]
       player1 = document.getElementById('player1').value = ''
       player2 = document.getElementById('player2').value = ''
       mostrarCartas(partida)
       PasarPantalla(load)
-      console.log(partida.cards)
+      console.log(partida)
       buttonAsigned(0)
     }
     
