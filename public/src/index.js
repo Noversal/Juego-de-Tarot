@@ -3,6 +3,7 @@ import { CarouselCartas } from './modules/CarrouselCartas'
 import { mostrarMatch } from './modules/MostrarMatch'
 import { PartidaGuardada } from './modules/PartidasGuardadas'
 import charge from './assets/img/loader.gif'
+import './css/main.css'
 
 // Botones
 const botonJugar = document.getElementById('play')
