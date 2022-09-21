@@ -2,7 +2,6 @@ import { getData } from './modules/services'
 import { CarouselCartas } from './modules/CarrouselCartas'
 import { mostrarMatch } from './modules/MostrarMatch'
 import { PartidaGuardada } from './modules/PartidasGuardadas'
-import charge from './assets/img/loader.gif'
 import './css/main.css'
 
 // Botones
@@ -78,9 +77,9 @@ const chuck = (cards) => {
   return (play)
 }
 
-const chunckCards =  () =>  getData().then(cards => chuck(cards))
+const chunckCards = () => getData().then(cards => chuck(cards))
 
-const mostrarCartas = ({cards,players},carga = 'Obteniendo Cartas...') => {
+const mostrarCartas = ({ cards, players }, carga = 'Obteniendo Cartas...') => {
   while (jugadaCartas.childNodes.length < 7) {
     if (jugadaCartas.childNodes.length > 0) {
       removeAllChilds(jugadaCartas)
@@ -91,7 +90,7 @@ const mostrarCartas = ({cards,players},carga = 'Obteniendo Cartas...') => {
         i++
       })
       console.log(jugadaCartas.childNodes.length)
-      
+      const charge = 'https://firebasestorage.googleapis.com/v0/b/tarot-c4969.appspot.com/o/extra%2Floader.gif?alt=media&token=9f25aa95-12ff-4090-a423-3a03f36357bd'
       // Pantalla de Carga
       load.innerHTML = `        
       <div class="load" >
@@ -100,7 +99,7 @@ const mostrarCartas = ({cards,players},carga = 'Obteniendo Cartas...') => {
       </div>`
 
       PasarPantalla(load)
-   
+
       break
     }
   }
@@ -111,7 +110,7 @@ const resultadoMatch = (cards) => {
   cards.forEach(card => {
     score += card.score
   })
-  return score % 2 === 0 
+  return score % 2 === 0
 }
 
 let partidasJugadas = []
@@ -123,17 +122,17 @@ const initGame = () => {
     players: [],
     cards: []
   }
-  
+
   botonJugar.addEventListener('click', async () => {
-    let player1 = document.getElementById('player1').value 
+    let player1 = document.getElementById('player1').value
     let player2 = document.getElementById('player2').value
-    
+
     const validateChuck = player1 !== '' && player2 !== ''
-    
-    if (validateChuck) { 
+
+    if (validateChuck) {
       cards = await chunckCards()
       partida.cards = cards
-      partida.players= [player1,player2]
+      partida.players = [player1, player2]
       player1 = document.getElementById('player1').value = ''
       player2 = document.getElementById('player2').value = ''
       mostrarCartas(partida)
@@ -141,9 +140,9 @@ const initGame = () => {
       console.log(partida)
       buttonAsigned(0)
     }
-    
+
   })
-  
+
   volverAtirar.addEventListener('click', async () => {
     cards = await chunckCards()
     partida.cards = cards
@@ -154,32 +153,32 @@ const initGame = () => {
 
   save.addEventListener('click', () => {
     const res = resultadoMatch(partida.cards)
-    match_result.innerHTML += mostrarMatch(res,partida.cards)
-    let ids = partidasJugadas.map(partida =>  partida.id ?? 0 )
+    match_result.innerHTML += mostrarMatch(res, partida.cards)
+    let ids = partidasJugadas.map(partida => partida.id ?? 0)
     partida = {
       ...partida,
       result: res,
       id: ids.length > 0 ? Math.max(...ids) + 1 : 1
     }
-    if(ids.length === 0) {
+    if (ids.length === 0) {
       partidasGuardadas.innerHTML = `            
       <h4>Partidas Guardadas</h4>
       <div class="partidasJugadas" id="partidaJugada"></div>
       `
     }
     partidaJugada = document.querySelector('#partidaJugada')
-    partidaJugada.innerHTML += PartidaGuardada(partida) 
+    partidaJugada.innerHTML += PartidaGuardada(partida)
     partidasJugadas.push(partida)
     console.log(partidasJugadas)
     PasarPantalla(match)
   })
-  
+
   match.addEventListener('click', (e) => {
     partida = {
       players: [],
       cards: []
     }
-    if(e.target.id === 'salirMatch'){
+    if (e.target.id === 'salirMatch') {
       removeAllChilds(match_result)
       PasarPantalla(menu)
     }
@@ -190,14 +189,14 @@ PasarPantalla(menu)
 initGame()
 
 partidasGuardadas.addEventListener('click', (e) => {
-  
+
   partidasJugadas.forEach(partida => {
     console.log(partida.id)
-    if(partida.id === Number(e.target.value)) {   
-      mostrarCartas(partida,'Cargando Partida...')
+    if (partida.id === Number(e.target.value)) {
+      mostrarCartas(partida, 'Cargando Partida...')
       buttonAsigned(1)
       verMatch.addEventListener('click', () => {
-        match_result.innerHTML += mostrarMatch(partida.res,partida.cards)
+        match_result.innerHTML += mostrarMatch(partida.res, partida.cards)
         PasarPantalla(match)
       })
     }

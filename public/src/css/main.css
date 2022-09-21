@@ -1,10 +1,9 @@
 @import "global.css";
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100;0,700;0,900;1,400&display=swap");
 
-
 body {
   font-family: "Bangers", cursive;
-  color: rgb(55,19,71);
+  color: rgb(55, 19, 71);
 }
 /* Menu */
 
@@ -21,11 +20,10 @@ body {
   font-size: 25px;
 }
 
-
 .menu__container {
   display: flex;
   flex-direction: column;
-  background: url("../assets/img/fondotarot-min.jpg");
+  background: url("https://firebasestorage.googleapis.com/v0/b/tarot-c4969.appspot.com/o/extra%2Ffondotarot-min.jpg?alt=media&token=c6a3f992-c785-4f5e-9e4b-8c0e9f13752a");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -39,7 +37,7 @@ body {
   width: 300px;
   flex-direction: column;
   justify-content: center;
-  padding:15px;
+  padding: 15px;
 }
 
 .player {
@@ -49,8 +47,8 @@ body {
   align-items: center;
 }
 
-.player h2{
-  font-size:min(40px);
+.player h2 {
+  font-size: min(40px);
 }
 
 .player input {
@@ -73,26 +71,25 @@ body {
 }
 
 .partidasGuardadas h4 {
-  text-align:center;
+  text-align: center;
 }
 
-
-.partida{
+.partida {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100vw;
-  padding:10px 0;
+  padding: 10px 0;
 }
 
-.jugadores p{
-  margin:0;
+.jugadores p {
+  margin: 0;
 }
 
 /* CARGA */
 
-.load{
-  background:url("../assets/img/fondotarot-min.jpg");
+.load {
+  background: url("https://firebasestorage.googleapis.com/v0/b/tarot-c4969.appspot.com/o/extra%2Ffondotarot-min.jpg?alt=media&token=c6a3f992-c785-4f5e-9e4b-8c0e9f13752a");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,18 +97,18 @@ body {
   justify-content: center;
 }
 
-.load img{
-    width: 100vw;
+.load img {
+  width: 100vw;
 }
 
-.load h4{
+.load h4 {
   text-align: center;
   font-size: calc(1.275rem + 7vw);
   width: min(200px);
 }
 
 /* CARTAS */
-.buttons-carousel{
+.buttons-carousel {
   padding: 10px;
   display: flex;
   height: 100vh;
@@ -119,50 +116,49 @@ body {
   justify-content: space-evenly;
 }
 
-.carousel .slide{
+.carousel .slide {
   padding: 10px;
 }
 
-.carousel{
+.carousel {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: url("../assets/img/fondotarot-min.jpg");
+  background: url("https://firebasestorage.googleapis.com/v0/b/tarot-c4969.appspot.com/o/extra%2Ffondotarot-min.jpg?alt=media&token=c6a3f992-c785-4f5e-9e4b-8c0e9f13752a");
 }
 
-
-.carousel-caption{
-  color:#dee2e6;
+.carousel-caption {
+  color: #dee2e6;
   background: #0000007a;
 }
 
-.carousel-indicators [data-bs-target]{
-  background:rgb(55,19,71);
+.carousel-indicators [data-bs-target] {
+  background: rgb(55, 19, 71);
   border-top: none;
   border-bottom: none;
-
 }
 
-.carousel-item  h4{
-  text-align:center;
+.carousel-item h4 {
+  text-align: center;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    outline: black;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    border: 1px solid black;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 /* CARTAS RESPUESTA */
 
-.match_result{
-  background: url("../assets/img/fondotarot-min.jpg");
-  padding:10px;
+.match_result {
+  background: url("https://firebasestorage.googleapis.com/v0/b/tarot-c4969.appspot.com/o/extra%2Ffondotarot-min.jpg?alt=media&token=c6a3f992-c785-4f5e-9e4b-8c0e9f13752a");
+  padding: 10px;
 }
 
-.resMatch{
+.resMatch {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -170,18 +166,17 @@ body {
   justify-content: space-evenly;
 }
 
-.resMatch-img img{
-  width:100px;
+.resMatch-img img {
+  width: 100px;
 }
-
 
 /* */
 
-.partidasGuardadas{
+.partidasGuardadas {
   outline: 1px solid;
 }
 
-.partidasGuardadas h4{
+.partidasGuardadas h4 {
   background: red;
   color: white;
 }
