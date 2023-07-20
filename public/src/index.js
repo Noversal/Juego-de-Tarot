@@ -83,9 +83,9 @@ const mostrarCartas = ({ cards, players }, carga = 'Obteniendo Cartas...') => {
   while (jugadaCartas.childNodes.length < 7) {
     if (jugadaCartas.childNodes.length > 0) {
       removeAllChilds(jugadaCartas)
-    } else {
-      let i = 0
-      cards.forEach(card => {
+    }
+    else {
+      cards.forEach((card,i) => {
         jugadaCartas.innerHTML += CarouselCartas(card, i, players)
         i++
       })
