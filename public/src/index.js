@@ -11,7 +11,7 @@ const save = document.querySelector('#save')
 const verMatch = document.querySelector('#verMatch')
 const buttonsCarousel = document.querySelectorAll('.buttons-carousel')
 //Pantallas
-const containers = document.querySelectorAll('container')
+const containers = document.querySelectorAll('#root > section')
 const menu = document.querySelector('#menu')
 const load = document.querySelector('#load')
 const cards = document.querySelector('#cards')
@@ -32,7 +32,7 @@ const buttonAsigned = (buttonNumber) => {
   buttonsCarousel.forEach(button => {
     button.style.display = 'none'
   })
-  buttonsCarousel[buttonNumber].style.display = 'block'
+  buttonsCarousel[buttonNumber].style.display = 'flex'
 }
 
 /**
@@ -105,7 +105,7 @@ const mostrarCartas = ({ cards, players }, carga = 'Obteniendo Cartas...') => {
   }
 }
 
-const resultadoMatch = (cards) => {
+const resultadoMatch = (cards) => {  
   let score = 0
   cards.forEach(card => {
     score += card.score
@@ -196,7 +196,7 @@ partidasGuardadas.addEventListener('click', (e) => {
       mostrarCartas(partida, 'Cargando Partida...')
       buttonAsigned(1)
       verMatch.addEventListener('click', () => {
-        match_result.innerHTML += mostrarMatch(partida.res, partida.cards)
+        match_result.innerHTML = mostrarMatch(partida.result, partida.cards)
         PasarPantalla(match)
       })
     }
